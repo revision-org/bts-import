@@ -1,0 +1,19 @@
+{
+  "name": "bts-import",
+  "version": "1.0.0",
+  "description": "Import BizTalk server data into Revision.app",
+  "main": "index.js",
+  "repository": "https://github.com/revision-org/bts-import.git",
+  "author": "Richard Hallgren",
+  "license": "MIT",
+  "bin": "./bin/bts-import.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "engines": {
+    "node": ">= 14"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
+}
