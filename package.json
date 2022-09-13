@@ -8,12 +8,25 @@
   "license": "MIT",
   "bin": "./bin/bts-import.js",
   "scripts": {
-    "build": "tsc"
+    "dev": "ts-node-dev --respawn ./src/index.ts --settings ./test-data/settings.json",
+    "build": "tsc",
+    "prepack": "yarn build"
   },
   "engines": {
     "node": ">= 14"
   },
   "devDependencies": {
+    "@types/command-line-args": "^5.2.0",
+    "@types/libxmljs": "^0.18.8",
+    "@types/node": "^18.7.17",
+    "@types/node-fetch": "^2.6.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "chalk": "^4",
+    "command-line-args": "^5.2.1",
+    "libxmljs": "^0.19.10",
+    "node-fetch": "^2"
   }
 }
