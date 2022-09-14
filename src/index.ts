@@ -38,6 +38,8 @@ async function main() {
       await sendData(receivePort, settings);
     }
   }
+  console.log("Done");
+  process.exit();
 }
 
 main();

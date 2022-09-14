@@ -75,6 +75,7 @@ export const parseSendPort = async (
   const data: any = {
     id: name,
     name: name,
+    apiContext: settings.context || "bts-import",
     typeId: settings.sendPorts.typeId,
   };
 

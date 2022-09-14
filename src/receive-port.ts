@@ -26,15 +26,7 @@ export const getTransforms = (port?: libxmljs.Element) => {
     .map((t) => (t as libxmljs.Element).attr("FullName")?.value());
 };
 
-// export const getTransport = (transport?: libxmljs.Element) => {
-//   return {
-//     address: getAddress(transport || undefined),
-//     transportType: getTransportType(transport || undefined),
-//   };
-// };
-
 export const getReceiveLocations = (receiveLocations?: libxmljs.Element[]) => {
-  console.log("tt", receiveLocations?.length);
   return receiveLocations?.map((r) => {
     return {
       name: r.attr("Name"),
@@ -49,7 +41,7 @@ export const parseReceivePort = async (
   settings: Settings
 ) => {
   const name = receivePort.attr("Name")?.value();
-  console.log("ff", name);
+
   const rl = getReceiveLocations(
     receivePort
       .get("ReceiveLocations")
@@ -87,6 +79,7 @@ export const parseReceivePort = async (
   let data: any = {
     id: name,
     name: name,
+    apiContext: settings.context || "bts-import",
     typeId: settings.receivePorts.typeId,
   };
 

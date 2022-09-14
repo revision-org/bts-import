@@ -8,6 +8,7 @@ type attribute = {
 export type Settings = {
   apiKey: string;
   path: string;
+  context?: string;
   sendPorts: {
     typeId?: number;
     attributes?: attribute;

@@ -2,3 +2,4 @@ node_modules
 *.tgz
 settings.json
 test-data
+build
